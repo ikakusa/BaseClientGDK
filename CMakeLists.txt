@@ -62,6 +62,16 @@ if(MSVC)
     )
 endif()
 
+target_link_libraries(${PROJECT_NAME} PRIVATE
+        safetyhook::safetyhook
+        libhat::libhat
+        glm::glm
+        EnTT::EnTT
+        DiscordRPC
+        yaml-cpp::yaml-cpp
+        Microsoft::DirectX-Headers
+)
+
 target_compile_definitions(${PROJECT_NAME} PRIVATE
         _WINDLL
         WIN32_LEAN_AND_MEAN
